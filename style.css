@@ -1,44 +1,91 @@
 :root {
-    --bg_color: #273246;
-    --text_color: #e2d0bf;
+    --bg_color_dark: #1c273b;
+    --bg_color_light: #16726c;
+    --text_color: #dab488;
+    --std_padding: .7em;
 }
 
 body {
-    background-color: var(--bg_color);
+    background-color: var(--bg_color_dark);
     color: var(--text_color);
-    text-align: justify;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    margin: auto;
-    padding: 25px;
-    max-width: 800px;
     font-size: larger;
-}
-
-#language_switcher img {
-    width: 40px;
+    margin:0;
 }
 
 #top_banner {
-    height: 300px;
-    margin-bottom: 80px;
+    z-index: 0;
+    height: 100%;
+    padding: var(--std_padding);
+    padding-bottom: 0px;
+    overflow-x: hidden;
 }
+
+#language_switcher {
+    position: absolute;
+    vertical-align: top;
+}
+
+#language_switcher > img {
+    filter: saturate(70%) brightness(50%);
+    width: 2.5em;
+}
+
+#top_banner_center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: auto;
+    max-width: 40em;
+}
+
 #profile_pic {
-    text-align: left;
-    max-height: 100%;
-    display: inline-block;
+    --img-size: 14em;
+    height: var(--img-size);
+    border: .3em solid var(--text_color);
+    border-radius: var(--img-size);
 }
-#top_banner_right {
-    float:right;
-    text-align: right;
+
+#top_banner_text::before {
+    content:"";
+    background-color: var(--bg_color_light);
+    position: absolute;
+    left: -500vw;
+    width: 1000vw;
+    top: -500vw;
+    height: calc(500vw + 100%);
+    z-index: -1;
+}
+
+#top_banner_text {
+    position: relative;
+    text-align: center;
+    padding: var(--std_padding);
+    padding-top: 0;
 }
 
 .social_icon {
-    width: 50px;
-    height: auto;
-    margin-left: 10px;
+    display: inline-block;
+    margin-left: calc(var(--std_padding) / 2);
+    margin-right: calc(var(--std_padding) / 2);
+    text-decoration: none;
 }
 
-.social_icon path {
+.social_icon > svg {
+    vertical-align: top;
+    width: 3em;
+    height: auto;
+}
+
+.social_icon > svg > path {
     fill: var(--text_color);
+}
+
+#main {
+    text-align: justify;
+    margin: auto;
+    padding: 0 var(--std_padding) 0 var(--std_padding);
+    max-width: 40em;
 }
