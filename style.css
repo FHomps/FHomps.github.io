@@ -1,11 +1,25 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("Roboto.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Roboto Slab";
+    src: url("RobotoSlab.ttf");
+    font-weight: 300;
+}
+
 :root {
     --bg_color_dark: #25334e;
     --bg_color_light: #18726e;
     --bg_color_lighter: #499b97;
-    --text_color: #e4d2bb;
+    --text_color: #e2ccaf;
+    --link_color: #e0841a;
     --std_padding: .7em;
     --tight_padding: .2em;
     --navbar_item_height: 1.6em;
+    --shadow_color: #000000bb;
 }
 
 body {
@@ -14,12 +28,17 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: larger;
-    line-height: 1.35em;
+    line-height: 1.8em;
     margin:0;
 }
 
+a {
+    color: var(--link_color);
+    text-decoration: none;
+}
+
 #nav_bar {
-    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,7 +46,7 @@ body {
     left: 0;
     width: 100%;
     background-color: var(--bg_color_lighter);
-    box-shadow: 0px 0px 5px 0px black;
+    box-shadow: 0px 0px 5px 0px var(--shadow_color);
 }
 
 #nav_links {
@@ -37,10 +56,9 @@ body {
 }
 
 #nav_links > a {
+    color: var(--text_color);
     max-height: var(--navbar_item_height);
     margin-left: var(--std_padding);
-    color: var(--text_color);
-    text-decoration: none;
 }
 
 #language_switcher {
@@ -80,10 +98,10 @@ body {
 }
 
 #profile_pic {
-    --img-size: 14em;
-    height: var(--img-size);
+    --img_size: 14em;
+    height: var(--img_size);
     border: .3em solid var(--text_color);
-    border-radius: var(--img-size);
+    border-radius: var(--img_size);
 }
 
 #top_banner_text {
@@ -91,6 +109,7 @@ body {
     text-align: center;
     padding: var(--std_padding);
     padding-top: 0;
+    font-family: 'Roboto Slab', sans-serif;
 }
 
 #top_banner_text::before {
@@ -102,7 +121,11 @@ body {
     width: 1000vw;
     top: -500vw;
     height: calc(500vw + 100%);
-    box-shadow: 0px 0px 5px 0px black;
+    box-shadow: 0px 0px 5px 0px var(--shadow_color);
+}
+
+#social_icons, #top_banner_text > h1, #top_banner_text > h2, #profile_pic {
+    filter: drop-shadow(0px 1px 1px var(--shadow_color));   
 }
 
 #social_icons {
