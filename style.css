@@ -95,7 +95,7 @@ a {
     max-width: 40em;
 }
 
-#profile_pic {
+#profile_pic > img {
     --img_size: 14em;
     height: var(--img_size);
     border: .3em solid var(--text_color);

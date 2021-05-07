@@ -23,7 +23,11 @@
     </div>
     <div id="top_banner">
       <div id="top_banner_center">
-        <img id="profile_pic" src="../parrot.png" alt="A picture of myself." title="I made some great friends in Japan.">
+        <picture id="profile_pic" alt="A picture of myself." title="I made some great friends in Japan.">
+          <source srcset="../parrot.webp" type="image/webp">
+          <source srcset="../parrot.png" type="image/jpeg"> 
+          <img src="../parrot.png">
+        </picture>
         <div id="top_banner_text">
           <h1>François Homps</h1>
           <h2>Soon-to-be engineer</h2>
