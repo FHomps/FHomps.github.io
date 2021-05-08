@@ -18,6 +18,8 @@
     --tight_padding: .2em;
     --navbar_item_height: 1.6em;
     --shadow_color: #000000bb;
+    --social_icon_size: 2.5em;
+    --skill_icon_size: 5em;
 }
 
 body {
@@ -140,14 +142,8 @@ a {
 }
 
 #social_icons > a > svg {
-    width: 2.5em;
-    height: 2.5em;
-}
-
-#social_icons > a > img {
-    width: 2.5em;
-    height: 2.5em;
-    filter: invert(1) sepia(0.5) saturate(7) brightness(80%) hue-rotate(-25deg);
+    width: var(--social_icon_size);
+    height: var(--social_icon_size);
 }
 
 #social_icons > a > svg > path {
@@ -157,6 +153,35 @@ a {
 #main {
     text-align: justify;
     margin: auto;
-    padding: 0 var(--std_padding) 0 var(--std_padding);
+    padding: 0 var(--std_padding);
     max-width: 40em;
+}
+
+#skills_icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 2.5em auto;
+    align-items: flex-start;
+}
+
+.skill_icon {
+    margin: 1em;
+    width: calc(var(--skill_icon_size) + 2em);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.skill_icon > svg {
+    width: var(--skill_icon_size);
+    height: var(--skill_icon_size);
+    margin: 0 auto var(--tight_padding);
+}
+
+.skill_icon > svg > path {
+    fill: var(--text_color);
 }
