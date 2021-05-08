@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Roboto";
-    src: url("fonts/Roboto-Light.ttf");
+    src: url("/assets/fonts/Roboto-Light.ttf");
 }
 
 @font-face {
     font-family: "Roboto Slab";
-    src: url("fonts/RobotoSlab-Light.ttf");
+    src: url("/assets/fonts/RobotoSlab-Light.ttf");
 }
 
 :root {
@@ -98,8 +98,9 @@ a {
 #profile_pic > img {
     --img_size: 14em;
     height: var(--img_size);
-    border: .3em solid var(--text_color);
-    border-radius: var(--img_size);
+    background-color: var(--text_color);
+    padding: .25em;
+    border-radius: 50%;
 }
 
 #top_banner_text {
@@ -141,6 +142,12 @@ a {
 #social_icons > a > svg {
     width: 2.5em;
     height: 2.5em;
+}
+
+#social_icons > a > img {
+    width: 2.5em;
+    height: 2.5em;
+    filter: invert(1) sepia(0.5) saturate(7) brightness(80%) hue-rotate(-25deg);
 }
 
 #social_icons > a > svg > path {
