@@ -13,7 +13,7 @@ saveButton.onclick = () => {
 loadButton.onclick = () => {
   var fileInput = document.createElement("input")
   fileInput.type = "file"
-  fileInput.accept = "text/ccs"
+  fileInput.accept = ".ccs"
 
   fileInput.onchange = () => {
     var file = fileInput.files[0]
