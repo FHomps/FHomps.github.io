@@ -1,0 +1,167 @@
+@font-face {
+    font-family: title-font;
+    src: url("/assets/shared/fonts/Silicon.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: header-font;
+    src: url("/assets/shared/fonts/Copperplate\ Gothic\ Bold\ Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: paragraph-font;
+    src: url("/assets/shared/fonts/Poly-Regular.ttf") format('truetype');
+}
+
+:root {
+    --padding: 20mm;
+    --black: #111;
+    --grey: #888;
+    --table-bg: #CCC;
+    --table-border: #AAA;
+}
+
+.sheet {
+    padding: var(--padding);
+}
+
+body {
+    font-family: paragraph-font;
+    text-align: justify;
+    line-height: 1.4em;
+    font-size: 1em;
+}
+
+#content {
+    flow-into: content-flow;
+}
+
+.content-sink {
+    flow-from: content-flow;
+    counter-increment: page;
+}
+
+h1 {
+    break-before: always;
+}
+
+h1, h2, h3 {
+    break-after: avoid;
+}
+
+p, li {
+    break-inside: avoid;
+}
+
+#content--fragment > :first-child {
+    margin-top: 0 !important;
+}
+
+.content-sink::after {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    content: counter(page);
+    bottom: calc(var(--padding) - 2em);
+    left: 0;
+}
+
+.title {
+    color: var(--black);
+    font-family: title-font;
+    text-align: center;
+    font-size: 6em;
+    margin: 0;
+    margin-top: 1em;
+}
+
+.subtitle {
+    color: var(--grey);
+    font-family: title-font;
+    text-align: center;
+    font-size: 1.8em;
+    margin: 0;
+    margin-top: 2em;
+}
+
+.header {
+    position: absolute;
+    top: var(--padding);
+    width: calc(100% - 2 * var(--padding));
+}
+
+.footer {
+    position: absolute;
+    bottom: var(--padding);
+    width: calc(100% - 2 * var(--padding));
+}
+
+.credits {
+    color: var(--grey);
+    font-family: header-font;
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+h1, h2, h3 {
+    font-family: header-font;
+    text-align: left;
+    break-after: avoid;
+}
+
+h1 {
+    text-decoration: underline;
+    font-size: 1.8em;
+    margin: 2em 0 1em;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 0.8em 0;
+}
+
+table {
+    border-collapse: collapse;
+    break-inside: avoid;
+    text-align: left;
+    width: 100%;
+}
+
+td, th {
+    padding: 0 0.6em;
+}
+
+th {
+    font-weight: bold;
+    text-align: center;
+}
+
+.rb-table td {
+    border-width: 1px;
+    border-style: solid none solid solid;
+    border-color: var(--table-border);
+}
+
+.rb-table td:first-of-type {
+    border-style: solid none;
+}
+
+.rb-table tr:nth-child(2n) td {
+    background-color: var(--table-bg);
+}
+
+.cs-table, .cs-table tr, .cstable th, .cs-table td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--black);
+}
+
+.cs-table th {
+    background-color: var(--black);
+    color: white;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Carbone - Fiche de personnage</title>
+
+  <link rel="stylesheet" href="/css/carbon/normalize.css">
+
+  <link rel="stylesheet" href="/css/carbon/paper.css">
+
+  <link rel="stylesheet" href="/css/carbon/manual.css">
+  <link rel="stylesheet" href="/css/carbon/character_sheet.css">
+
+  <script src="/js/carbon/css-regions-polyfill.js"></script>
+
+  <link rel="icon" href="/assets/carbon/favicon.png">
+
+  <style>@page { size: A4 }</style>
+</head>
+
+<body class="A4">
+  <form id="csForm">
+    <section class="sheet" style="display: flex; flex-direction: column">
+      <h1>CARBONE - Fiche de personnage</h1>
+  
+      <div class="hspacer"></div>
+  
+      <div style="display: flex">
+        <div style="flex: 2; display: flex">
+          <table class="cs-table" style="margin-right: .15cm">
+            <tr>
+              <th style="width: 50%">Nom</th>
+              <th style="width: 25%">Âge</th>
+              <th style="width: 25%">Sexe / Genre</th>
+            </tr>
+            <tr>
+              <td><textarea name="name"></textarea></td>
+              <td><textarea name="age"></textarea></td>
+              <td><textarea name="sex"></textarea></td>
+            </tr>
+            <tr>
+              <th colspan=3>Biographie, objectifs et dégoûts</th>
+            </tr>
+            <tr>
+              <td colspan=3><textarea name="backstory" style="height: 4cm"></textarea></td>
+            </tr>
+          </table>
+        </div>
+  
+        <div style="flex: 1; display: flex">
+          <table class="cs-table" style="height: 100%; margin-left: .15cm">
+            <tr>
+              <th style="position: relative">
+                Apparence
+                <select name="appearanceSelect" id="appearanceSelect">
+                  <option value="image">image</option>
+                  <option value="text">texte</option>
+                </select>
+              </th>
+            </tr>
+            <tr>
+              <td style="position: relative; height: 100%">
+                <input id="appearanceImageInput" accept="image/*" type='file'></input>
+                <label id="appearanceImageLabel" for="appearanceImageInput">
+                  <canvas id="appearanceCanvas" height=0 width=0></canvas>
+                  <div id="appearanceImagePrompt">Cliquer pour choisir une image</div>
+                </label>
+                <textarea name="appearanceText" id="appearanceText" style="height: 100%"></textarea>
+              </td>
+            </tr>
+            <script src="/js/carbon/appearance-controls.js"></script>
+          </table>
+        </div>
+      </div>
+  
+      <div class="hspacer"></div>
+  
+      <table class="cs-table">
+        <tr>
+          <th colspan=6>Talents</th>
+        </tr>
+        <tr class="talents">
+          <td><textarea name="talent1"></textarea></td><td><textarea name="talentLevel1"></textarea></td>
+          <td><textarea name="talent2"></textarea></td><td><textarea name="talentLevel2"></textarea></td>
+          <td><textarea name="talent3"></textarea></td><td><textarea name="talentLevel3"></textarea></td>
+        </tr>
+        <tr class="talents">
+          <td><textarea name="talent4"></textarea></td><td><textarea name="talentLevel4"></textarea></td>
+          <td><textarea name="talent5"></textarea></td><td><textarea name="talentLevel5"></textarea></td>
+          <td><textarea name="talent6"></textarea></td><td><textarea name="talentLevel6"></textarea></td>
+        </tr>
+      </table>
+  
+      <div class="hspacer"></div>
+  
+      <table class="cs-table">
+        <tr>
+          <th style="width: 33.33%">Points de vie</th>
+          <th>Statut</th>
+        </tr>
+        <tr>
+          <td><textarea name="lifePoints" style="height: 2cm"></textarea></td>
+          <td><textarea name="status" style="height: 2cm"></textarea></td>
+        </tr>
+      </table>
+  
+      <div class="hspacer"></div>
+  
+      <div style="position: relative">
+        <table class="pt-table">
+          <tr>
+            <th>Succès</th>
+            <td>-2</td>
+            <td style="color: white">-1</td>
+            <td>0</td>
+            <td>0</td>
+            <td style="color: white">1</td>
+            <td style="color: white">1</td>
+            <td>2</td>
+            <td style="color: white">3</td>
+            <td>4</td>
+          </tr>
+        </table>
+  
+        <svg class="pt-bar" viewBox="-10 -10 930 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="000,0 100,0 120,50 100,100 000,100 020,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+          <polygon points="100,0 200,0 220,50 200,100 100,100 120,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+          <polygon points="200,0 400,0 420,50 400,100 200,100 220,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+          <polygon points="400,0 600,0 620,50 600,100 400,100 420,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+          <polygon points="600,0 700,0 720,50 700,100 600,100 620,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+          <polygon points="700,0 800,0 820,50 800,100 700,100 720,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+          <polygon points="800,0 910,0 910,100 800,100 820,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        </svg>
+      </div>
+  
+      <div class="hspacer"></div>
+  
+      <div style="position: relative">
+        <table class="pt-table">
+          <tr>
+            <th>Degré</th>
+            <td>-2</td>
+            <td style="color: white">-1</td>
+            <td>0</td>
+            <td style="color: white">1</td>
+            <td>2</td>
+            <td>2</td>
+            <td style="color: white">3</td>
+            <td style="color: white">3</td>
+            <td>4</td>
+          </tr>
+        </table>
+  
+        <svg class="pt-bar" viewBox="-10 -10 930 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="000,0 100,0 120,50 100,100 000,100 020,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+          <polygon points="100,0 200,0 220,50 200,100 100,100 120,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+          <polygon points="200,0 300,0 320,50 300,100 200,100 220,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+          <polygon points="300,0 400,0 420,50 400,100 300,100 320,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+          <polygon points="400,0 600,0 620,50 600,100 400,100 420,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+          <polygon points="600,0 800,0 820,50 800,100 600,100 620,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+          <polygon points="800,0 910,0 910,100 800,100 820,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        </svg>
+      </div>
+  
+      <div class="hspacer"></div>
+  
+  
+      <table class="cs-table">
+        <tr>
+          <th style="width: 33.33%">Catalyseur</th>
+          <th style="width: 8.33%">Plancher</th>
+          <th style="width: 25%">Effet</th>
+          <th>Remarques</th>
+        </tr>
+        <tr>
+          <td><textarea name="catalyst1"></textarea></td><td><textarea name="ctFloor1"></textarea></td><td><textarea name="ctEffect1"></textarea></td><td><textarea name="ctNotes1"></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea name="catalyst2"></textarea></td><td><textarea name="ctFloor2"></textarea></td><td><textarea name="ctEffect2"></textarea></td><td><textarea name="ctNotes2"></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea name="catalyst3"></textarea></td><td><textarea name="ctFloor3"></textarea></td><td><textarea name="ctEffect3"></textarea></td><td><textarea name="ctNotes3"></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea name="catalyst4"></textarea></td><td><textarea name="ctFloor4"></textarea></td><td><textarea name="ctEffect4"></textarea></td><td><textarea name="ctNotes4"></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea name="catalyst5"></textarea></td><td><textarea name="ctFloor5"></textarea></td><td><textarea name="ctEffect5"></textarea></td><td><textarea name="ctNotes5"></textarea></td>
+        </tr>
+        <tr>
+          <td><textarea name="catalyst6"></textarea></td><td><textarea name="ctFloor6"></textarea></td><td><textarea name="ctEffect6"></textarea></td><td><textarea name="ctNotes6"></textarea></td>
+        </tr>
+      </table>
+  
+      <div class="hspacer"></div>
+  
+      <div style="flex: 1; display: flex">
+        <div style="flex: 2; display: flex">
+          <table class="cs-table" style="margin-right: .15cm; height: 100%">
+            <tr>
+              <th>Objets</th>
+            </tr>
+            <tr>
+              <td style="height: 100%">
+                <textarea name="items" style="height: 100%"></textarea>
+              </td>
+            </tr>
+          </table>    
+        </div>
+      
+        <div style="flex: 1; display: flex">
+          <div style="margin-left: .15cm; width: 100%; display: flex; flex-direction: column">
+            <table class="cs-table" >
+              <tr>
+                <th>Monnaie</th>
+              </tr>
+              <tr>
+                <td><textarea name="money"></textarea></td>
+              </tr>
+            </table>
+      
+            <div class="hspacer"></div>
+      
+            <table class="cs-table" style="height: 100%">
+              <tr>
+                <th>Divers</th>
+              </tr>
+              <tr>
+                <td style="height: 100%">
+                  <textarea name="miscellaneous" style="height: 100%"></textarea>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>
+
+  <div id="fileControls">
+    <input id="saveButton" type="button" value="Sauvegarder">
+    <input id="loadButton" type="button" value="Charger">
+    <input id="exportButton" type="button" value="Imprimer">
+  
+    <script src="/js/carbon/file-controls.js"></script>
+  </div>
+</body>
+
+</html>
