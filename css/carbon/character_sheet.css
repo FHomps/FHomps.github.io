@@ -19,8 +19,8 @@ th {
     padding: 0;
 }
 
-.hspacer {
-    flex-basis: .3cm;
+.spacer {
+    flex: 0 0 .3cm;
 }
 
 .talents td {
