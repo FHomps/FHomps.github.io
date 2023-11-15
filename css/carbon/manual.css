@@ -165,3 +165,40 @@ th {
     background-color: var(--black);
     color: white;
 }
+
+.pt-bar {
+    position: absolute;
+    height: 1.20cm;
+    width: 16.72cm;
+    top: -0.08cm;
+    left: 1.45cm;
+}
+
+.pt-slot {
+    stroke: var(--black);
+    stroke-width: 1px;
+    fill: none;
+}
+
+.pt-slot:nth-child(2n) {
+    fill: var(--grey);
+}
+
+.pt-table {
+    z-index: 1;
+    position: relative;
+}
+
+.pt-table th, .pt-table td {
+    border: none;
+    text-align: center;
+    width: 1cm;
+    height: 1cm;
+    padding: 0;
+}
+
+.pt-table th {
+    text-align: left;
+    max-width: 1cm;
+    min-width: 1cm;
+}

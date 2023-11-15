@@ -164,56 +164,131 @@
 
     <p>Lorsque vous tentez une action, Carbone doit pouvoir prendre en compte les forces et faiblesses de votre personnage, ainsi que la situation dans laquelle il se trouve. Vous allez pour cela pouvoir utiliser un système de <b>points</b> pour influencer vos résultats avec des <b>bonus</b> ou <b>malus</b>.</p>
     
-    <p>Toute action soumise à un jet de dés vous offre, à la base, <b>6 points</b> à répartir de haut en bas dans les emplacements du tableau ci-dessous. Dans ce manuel, &#9898; représente un emplacement vide, et &#9899; un emplacement rempli.
+    <p>Toute action soumise à un jet de dés vous offre, à la base, <b>4 points</b>, qui seront à répartir dans les frises de votre fiche de personnage représentées ci-dessous.
 
-    <table class="rb-table" style="text-align: center">
-      <tr><tr>
-        <th></th>
-        <th colspan=2>Coût en points</th>
-      </tr>
-      <tr>
-        <th>Bonus / malus...</th>
-        <th style="width: 14em">...sur le jet de succès</th>
-        <th style="width: 14em">...sur le jet de degré</th>
-      </tr></tr>
-      <tr><td>-2</td>   <td>&#9899;</td>           <td>&#9899;</td></tr>
-      <tr><td>-1</td>   <td>&#9899;</td>           <td>&#9899;</td></tr>
-      <tr><td> 0</td>   <td>&#9899;</td>           <td>&#9899;</td></tr>
-      <tr><td>+1</td>   <td>&#9898; &#9898;</td>   <td>&#9898;</td></tr>
-      <tr><td>+2</td>   <td>&#9898; &#9898;</td>   <td>&#9898;</td></tr>
-      <tr><td>+3</td>   <td>&#9898;</td>           <td>&#9898; &#9898;</td></tr>
-      <tr><td>+4</td>   <td>&#9898;</td>           <td>&#9898; &#9898;</td></tr>
-    </table>
+    <div style="position: relative">
+      <table class="pt-table">
+        <tr>
+          <th>Succès</th>
+          <td>-2</td>
+          <td style="color: white">-1</td>
+          <td>0</td>
+          <td>0</td>
+          <td style="color: white">1</td>
+          <td style="color: white">1</td>
+          <td>2</td>
+          <td style="color: white">3</td>
+          <td>4</td>
+        </tr>
+      </table>
 
-    <p>Vous pouvez répartir ces points <b>uniquement avant d'effectuer vos lancers</b>. Vos jets de dés seront alors modifiés par le bonus / malus correspondant à la <b>dernière case totalement remplie</b> du la colonne appropriée.</p>
+      <svg class="pt-bar" viewBox="-10 -10 990 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="000,0 100,0 120,50 100,100 000,100 020,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="100,0 200,0 220,50 200,100 100,100 120,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="200,0 400,0 420,50 400,100 200,100 220,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="400,0 600,0 620,50 600,100 400,100 420,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="600,0 700,0 720,50 700,100 600,100 620,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="700,0 800,0 820,50 800,100 700,100 720,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="800,0 910,0 910,100 800,100 820,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+      </svg>
+    </div>
 
-    <p>Le tableau ci-dessus montre la répartition par défaut des points, mais rien ne vous empêche de les distribuer à votre façon&nbsp;:</p>
+    <br>
 
-    <table class="rb-table" style="text-align: center">
-      <tr><tr>
-        <th></th>
-        <th colspan=2>Coût en points</th>
-      </tr>
-      <tr>
-        <th>Bonus / malus...</th>
-        <th style="width: 14em">...sur le jet de succès</th>
-        <th style="width: 14em">...sur le jet de degré</th>
-      </tr></tr>
-      <tr><td>-2</td>   <td>&#9899;</td>           <td>&#9899;</td></tr>
-      <tr><td>-1</td>   <td>&#9899;</td>           <td>&#9898;</td></tr>
-      <tr><td> 0</td>   <td>&#9899;</td>           <td>&#9898;</td></tr>
-      <tr><td>+1</td>   <td>&#9899; &#9899;</td>   <td>&#9898;</td></tr>
-      <tr><td>+2</td>   <td>&#9898; &#9898;</td>   <td>&#9898;</td></tr>
-      <tr><td>+3</td>   <td>&#9898;</td>           <td>&#9898; &#9898;</td></tr>
-      <tr><td>+4</td>   <td>&#9898;</td>           <td>&#9898; &#9898;</td></tr>
-    </table>
+    <div style="position: relative">
+      <table class="pt-table">
+        <tr>
+          <th>Degré</th>
+          <td>-2</td>
+          <td style="color: white">-1</td>
+          <td>0</td>
+          <td style="color: white">1</td>
+          <td>2</td>
+          <td>2</td>
+          <td style="color: white">3</td>
+          <td style="color: white">3</td>
+          <td>4</td>
+        </tr>
+      </table>
 
-    <p>Avec un tel tableau, vous rajouterez 1 à votre jet de succès, mais devrez retirer 2 à votre jet de degré.</p>
+      <svg class="pt-bar" viewBox="-10 -10 990 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="000,0 100,0 120,50 100,100 000,100 020,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="100,0 200,0 220,50 200,100 100,100 120,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="200,0 300,0 320,50 300,100 200,100 220,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="300,0 400,0 420,50 400,100 300,100 320,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="400,0 600,0 620,50 600,100 400,100 420,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="600,0 800,0 820,50 800,100 600,100 620,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="800,0 910,0 910,100 800,100 820,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+      </svg>
+    </div>
+
+  
+    <p>Vous pouvez répartir ces points <b>uniquement avant d'effectuer vos lancers</b>. Pour les répartir, bloquez pour chaque point une case d'une des deux frises, de gauche à droite. Vous pouvez utiliser des jetons, des pierres, des bouts de papier, vos doigts... Vos jets de dés seront alors modifiés par le bonus / malus correspondant à la <b>dernière case visible</b> de la frise appropriée.</p>
+
+    <p>Voici un exemple de distribution de ces quatre points pour une action&nbsp;:</p>
+
+    <div style="position: relative">
+      <table class="pt-table">
+        <tr>
+          <th>Succès</th>
+          <td>&#9899;</td>
+          <td style="color: white">-1</td>
+          <td>0</td>
+          <td>0</td>
+          <td style="color: white">1</td>
+          <td style="color: white">1</td>
+          <td>2</td>
+          <td style="color: white">3</td>
+          <td>4</td>
+        </tr>
+      </table>
+
+      <svg class="pt-bar" viewBox="-10 -10 990 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="000,0 100,0 120,50 100,100 000,100 020,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="100,0 200,0 220,50 200,100 100,100 120,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="200,0 400,0 420,50 400,100 200,100 220,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="400,0 600,0 620,50 600,100 400,100 420,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="600,0 700,0 720,50 700,100 600,100 620,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="700,0 800,0 820,50 800,100 700,100 720,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="800,0 910,0 910,100 800,100 820,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+      </svg>
+    </div>
+
+    <br>
+
+    <div style="position: relative">
+      <table class="pt-table">
+        <tr>
+          <th>Degré</th>
+          <td>&#9899;</td>
+          <td style="color: white">&#9899;</td>
+          <td>&#9899;</td>
+          <td style="color: white">1</td>
+          <td>2</td>
+          <td>2</td>
+          <td style="color: white">3</td>
+          <td style="color: white">3</td>
+          <td>4</td>
+        </tr>
+      </table>
+
+      <svg class="pt-bar" viewBox="-10 -10 990 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="000,0 100,0 120,50 100,100 000,100 020,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="100,0 200,0 220,50 200,100 100,100 120,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="200,0 300,0 320,50 300,100 200,100 220,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="300,0 400,0 420,50 400,100 300,100 320,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="400,0 600,0 620,50 600,100 400,100 420,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="600,0 800,0 820,50 800,100 600,100 620,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="800,0 910,0 910,100 800,100 820,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+      </svg>
+    </div>
+
+    <p>Avec un tel tableau, vous rajouterez 1 à votre jet de degré, mais devrez retirer 1 à votre jet de degré.</p>
 
     <p>Attention, ces manipulations sont risquées&nbsp;: si votre jet de degré devient nul ou négatif, votre action échouera toujours, quel que soit votre jet de succès&nbsp;! Qui plus est, votre jet de degré sera compté comme un 1 sur cet échec.<br>
     Quant au jet de succès, s'il s'avère nul ou négatif, il faudra lui transférer des points de votre jet de degré jusqu'à ce que l'un des deux atteigne 1.</p>
     
-    <p>En plus de vos 6 points de base, <b>chaque niveau de talent d'un personnage lui offre un point</b> pour toute action concernée par ce talent. Le critère d' «&nbsp;action concernée&nbsp;» peut être sujet à débat - dans ce cas, le MJ a toujours le dernier mot&nbsp;! Des compromis pour des actions auquel le talent ne s'applique que vaguement peuvent être atteints en diminuant le nombre de points accordés.</p>
+    <p>En plus de vos 4 points de base, <b>chaque niveau de talent d'un personnage lui offre un point</b> pour toute action concernée par ce talent. Le critère d' «&nbsp;action concernée&nbsp;» peut être sujet à débat - dans ce cas, le MJ a toujours le dernier mot&nbsp;! Des compromis pour des actions auquel le talent ne s'applique que vaguement peuvent être atteints en diminuant le nombre de points accordés.</p>
 
     <p>Dans le cas où plusieurs talents concernent la même action, les gains de points se cumulent. Après tout, si votre pêcheur roboticien a enfin l'occasion de participer à un concours de pêche à la truite mécanique, autant qu'il en profite&nbsp;!</p>
 
@@ -311,8 +386,8 @@
     </div>
   </section>
 
-  <!-- Continuous sheet for use during development >
-  <section class="sheet content-sink" style="height:fit-content"></section-->
+  <!-- Continuous sheet for use during development -->
+  <section class="sheet content-sink" style="height:fit-content"></section>
 
   <section class="sheet content-sink"></section>
   <section class="sheet content-sink"></section>
