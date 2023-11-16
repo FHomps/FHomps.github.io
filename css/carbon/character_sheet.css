@@ -132,4 +132,8 @@ textarea {
     #fileControls {
         display: none;
     }
+
+    #appearanceImagePrompt {
+        display: none;
+    }
 }
