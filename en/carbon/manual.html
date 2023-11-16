@@ -162,58 +162,132 @@
 
     <h2>Points, bonuses, and maluses</h2>
 
-    <p>When you undertake a non-trivial action, your character's strengths, weaknesses, and the context they are in should be taken into account. This is done through Carbon's <b>point system</b>.</p>
+    <p>When undertaking a non-trivial action, your character's strengths, weaknesses, and the context they are in should be taken into account. This is done through Carbon's <b>point system</b>.</p>
     
-    <p>For every action needing a roll of the die, you are given a starting pack of <b>6 points</b>, which you may distribute in the slots of the table below, starting from the top. In this manual, an empty slot is symbolized by &#9898;, while &#9899; represents a filled slot.</p>
+    <p>For every action needing a roll of the die, you are given a starting pack of <b>4 points</b>, which you may distribute in the slots of the table below.</p>
 
-    <table class="rb-table" style="text-align: center">
-      <tr><tr>
-        <th></th>
-        <th colspan=2>Point cost</th>
-      </tr>
-      <tr>
-        <th>Bonus / malus...</th>
-        <th style="width: 14em">...to the success roll</th>
-        <th style="width: 14em">...to the degree roll</th>
-      </tr></tr>
-      <tr><td>-2</td>   <td>&#9899;</td>           <td>&#9899;</td></tr>
-      <tr><td>-1</td>   <td>&#9899;</td>           <td>&#9899;</td></tr>
-      <tr><td> 0</td>   <td>&#9899;</td>           <td>&#9899;</td></tr>
-      <tr><td>+1</td>   <td>&#9898; &#9898;</td>   <td>&#9898;</td></tr>
-      <tr><td>+2</td>   <td>&#9898; &#9898;</td>   <td>&#9898;</td></tr>
-      <tr><td>+3</td>   <td>&#9898;</td>           <td>&#9898; &#9898;</td></tr>
-      <tr><td>+4</td>   <td>&#9898;</td>           <td>&#9898; &#9898;</td></tr>
-    </table>
+    <div style="position: relative">
+      <table class="pt-table">
+        <tr>
+          <th>Success</th>
+          <td>-2</td>
+          <td style="color: white">-1</td>
+          <td>0</td>
+          <td>0</td>
+          <td style="color: white">1</td>
+          <td style="color: white">1</td>
+          <td>2</td>
+          <td style="color: white">3</td>
+          <td>4</td>
+        </tr>
+      </table>
 
-    <p>You may redistribute those points <b>only before rolling the die</b>. Your success and degree roll will then be modified according to the <b>last completely filled cell</b> of the corresponding column.</p>
+      <svg class="pt-bar" viewBox="-10 -10 990 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="000,0 100,0 120,50 100,100 000,100 020,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="100,0 200,0 220,50 200,100 100,100 120,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="200,0 400,0 420,50 400,100 200,100 220,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="400,0 600,0 620,50 600,100 400,100 420,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="600,0 700,0 720,50 700,100 600,100 620,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="700,0 800,0 820,50 800,100 700,100 720,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="800,0 910,0 910,100 800,100 820,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+      </svg>
+    </div>
 
-    <p>The table above shows the default point distribution, but you may organize them however you want:</p>
+    <br>
 
-    <table class="rb-table" style="text-align: center">
-      <tr><tr>
-        <th></th>
-        <th colspan=2>Coût en points</th>
-      </tr>
-      <tr>
-        <th>Bonus / malus...</th>
-        <th style="width: 14em">...to the success roll</th>
-        <th style="width: 14em">...to the degree roll</th>
-      </tr></tr>
-      <tr><td>-2</td>   <td>&#9899;</td>           <td>&#9899;</td></tr>
-      <tr><td>-1</td>   <td>&#9899;</td>           <td>&#9898;</td></tr>
-      <tr><td> 0</td>   <td>&#9899;</td>           <td>&#9898;</td></tr>
-      <tr><td>+1</td>   <td>&#9899; &#9899;</td>   <td>&#9898;</td></tr>
-      <tr><td>+2</td>   <td>&#9898; &#9898;</td>   <td>&#9898;</td></tr>
-      <tr><td>+3</td>   <td>&#9898;</td>           <td>&#9898; &#9898;</td></tr>
-      <tr><td>+4</td>   <td>&#9898;</td>           <td>&#9898; &#9898;</td></tr>
-    </table>
+    <div style="position: relative">
+      <table class="pt-table">
+        <tr>
+          <th>Degree</th>
+          <td>-2</td>
+          <td style="color: white">-1</td>
+          <td>0</td>
+          <td style="color: white">1</td>
+          <td>2</td>
+          <td>2</td>
+          <td style="color: white">3</td>
+          <td style="color: white">3</td>
+          <td>4</td>
+        </tr>
+      </table>
 
-    <p>A table as above will result in 1 being added to the result of your success roll, but 2 being substracted from your degree roll.</p>
+      <svg class="pt-bar" viewBox="-10 -10 990 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="000,0 100,0 120,50 100,100 000,100 020,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="100,0 200,0 220,50 200,100 100,100 120,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="200,0 300,0 320,50 300,100 200,100 220,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="300,0 400,0 420,50 400,100 300,100 320,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="400,0 600,0 620,50 600,100 400,100 420,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="600,0 800,0 820,50 800,100 600,100 620,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="800,0 910,0 910,100 800,100 820,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+      </svg>
+    </div>
+
+    <p>You may redistribute those points <b>only before rolling the die</b>. To do so, block out slots of the table from left to right, using one point per slot - using tokens, stones, bits of paper, your fingers... Your success and degree roll will then be modified according to the <b>first visible number</b> of the corresponding table.</p>
+
+    <p>The table below shows an example distribution of the 4 points you are given by default:</p>
+
+    <div style="position: relative">
+      <table class="pt-table">
+        <tr>
+          <th>Succès</th>
+          <td>&#9899;</td>
+          <td style="color: white">-1</td>
+          <td>0</td>
+          <td>0</td>
+          <td style="color: white">1</td>
+          <td style="color: white">1</td>
+          <td>2</td>
+          <td style="color: white">3</td>
+          <td>4</td>
+        </tr>
+      </table>
+
+      <svg class="pt-bar" viewBox="-10 -10 990 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="000,0 100,0 120,50 100,100 000,100 020,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="100,0 200,0 220,50 200,100 100,100 120,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="200,0 400,0 420,50 400,100 200,100 220,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="400,0 600,0 620,50 600,100 400,100 420,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="600,0 700,0 720,50 700,100 600,100 620,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="700,0 800,0 820,50 800,100 700,100 720,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="800,0 910,0 910,100 800,100 820,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+      </svg>
+    </div>
+
+    <br>
+
+    <div style="position: relative">
+      <table class="pt-table">
+        <tr>
+          <th>Degré</th>
+          <td>&#9899;</td>
+          <td style="color: white">&#9899;</td>
+          <td>&#9899;</td>
+          <td style="color: white">1</td>
+          <td>2</td>
+          <td>2</td>
+          <td style="color: white">3</td>
+          <td style="color: white">3</td>
+          <td>4</td>
+        </tr>
+      </table>
+
+      <svg class="pt-bar" viewBox="-10 -10 990 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="000,0 100,0 120,50 100,100 000,100 020,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="100,0 200,0 220,50 200,100 100,100 120,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="200,0 300,0 320,50 300,100 200,100 220,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="300,0 400,0 420,50 400,100 300,100 320,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="400,0 600,0 620,50 600,100 400,100 420,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="600,0 800,0 820,50 800,100 600,100 620,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+        <polygon points="800,0 910,0 910,100 800,100 820,50" vector-effect="non-scaling-stroke" class="pt-slot"/>
+      </svg>
+    </div>
+
+    <p>This choice of distribution will result in 1 being added to the result of your degree roll, but -1 being substracted from your success roll.</p>
 
     <p>Watch out, tricks like these are risky: if your degree roll reaches 0 or below, your action will always fail, regardless of your sucess roll's result! And it won't be a pretty failure either - your degree roll will count as a one.<br>
     Similarly, if your success roll reaches zero or below, transfer points to it from your degree roll until either reaches one.</p>
 
-    <p>Adding to those 6 base points, <b>every talent level of a character confers one additional point</b> when attempting an action related to that talent. Whether or not an action is “related” to a talent can be questionable, and will be left to the interpretation of the players and GM. If a talent is only vaguely related to the action, compromise can be achieved by only according part of the points.</p>
+    <p>Adding to those 4 base points, <b>every talent level of a character confers one additional point</b> when attempting an action related to that talent. Whether or not an action is “related” to a talent can be questionable, and will be left to the interpretation of the players and GM. If a talent is only vaguely related to the action, compromise can be achieved by only according part of the points.</p>
 
     <p>If multiple talents are related to a same action, their awarded points stack. After all, if a mechanical trout fishing competition is being held, and your character is a master fisherman with a PhD in robotics, of course they'd win!</p>
 
@@ -311,8 +385,8 @@
     </div>
   </section>
 
-  <!-- Continuous sheet for use during development >
-  <section class="sheet content-sink" style="height:fit-content"></section-->
+  <!-- Continuous sheet for use during development -->
+  <section class="sheet content-sink" style="height:fit-content"></section>
 
   <section class="sheet content-sink"></section>
   <section class="sheet content-sink"></section>
