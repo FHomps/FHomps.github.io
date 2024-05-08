@@ -1,14 +1,24 @@
-<!DOCTYPE html><html><head>
-    <base href="/assets/chess2/">
-    <meta charset="UTF-8">
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/assets/chess2/" />
+    <meta charset="UTF-8" />
     <title>Chess 2</title>
-    <link rel="stylesheet" href="/assets/chess2/index.css">
+    <link rel="stylesheet" href="/assets/chess2/index.css" data-integrity="none"/>
     
-    <script type="module">import init from '/assets/chess2/chess2.js';init('/assets/chess2/chess2_bg.wasm');</script>
-    <script>window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
-  
-<link rel="preload" href="/assets/chess2/chess2_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-<link rel="modulepreload" href="/assets/chess2/chess2.js"></head>
+    
+<script type="module">
+import init, * as bindings from '/assets/chess2/chess2.js';
+const wasm = await init('/assets/chess2/chess2_bg.wasm');
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  </head>
   <body>
     <div id="nav_bar">
       <div id="language_switcher">
@@ -42,6 +52,8 @@
             <option value="hole">The Hole</option>
             <option value="closeup">Close-up</option>
             <option value="marathon">Marathon</option>
+            <option value="double">Double</option>
+            <option value="secret_passage">Secret Passage</option>
             <option value="custom">Custom</option>
           </select>
           <!--button>Load layout</button>
@@ -65,6 +77,6 @@
       <canvas id="bevy_game">
       </canvas>
     </div>
-  
-  <script src="/assets/chess2/index.js"></script>
-</body></html>
+  </body>
+  <script src="/assets/chess2/index.js" data-integrity="none"></script>
+</html>
