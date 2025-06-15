@@ -9,7 +9,7 @@
     
 <script type="module">
 import init, * as bindings from '/assets/chess2/chess2.js';
-const wasm = await init('/assets/chess2/chess2_bg.wasm');
+const wasm = await init({ module_or_path: '/assets/chess2/chess2_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -18,7 +18,7 @@ window.wasmBindings = bindings;
 dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
 </script>
-  </head>
+  <link rel="modulepreload" href="/assets/chess2/chess2.js" crossorigin="anonymous"><link rel="preload" href="/assets/chess2/chess2_bg.wasm" crossorigin="anonymous" as="fetch" type="application/wasm"></head>
   <body>
     <div id="nav_bar">
       <div id="language_switcher">
